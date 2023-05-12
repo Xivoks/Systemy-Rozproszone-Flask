@@ -12,3 +12,4 @@ migrate = Migrate(app, db)
 
 from application import users
 from application import models
+from application import db_manage_commands
