@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Delete User</h1>
+  <p>Are you sure you want to delete the user {{ user.name }} with ID {{ user.id }}?</p>
+  <form action="/api/v1/users_delete/{{ user.id }}" method="POST">
+    <input type="hidden" name="_method" value="DELETE">
+    <button type="submit">Delete</button>
+  </form>
+{% endblock %}
