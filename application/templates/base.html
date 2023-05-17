@@ -8,10 +8,18 @@
 <body>
 <nav>
     <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/api/v1/users">Get Users</a></li>
+        <li class="{{ 'active' if request.path == '/' else '' }}"><a href="/">Home</a></li>
+        <li class="{{ 'active' if request.path == '/api/v1/users' else '' }}"><a href="/api/v1/users">Get Users</a></li>
+        <li class="{{ 'active' if request.path == '/create_user' else '' }}"><a href="/create_user">Create User</a></li>
     </ul>
 </nav>
+
+
+
+
+
+
+
 <div class="content">
     {% block content %}{% endblock %}
 </div>

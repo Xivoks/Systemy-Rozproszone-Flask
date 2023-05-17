@@ -4,12 +4,12 @@
   <h1>Edit User</h1>
   <form action="/api/v1/users/{{ user.id }}" method="post">
   <label for="name">Name:</label>
-  <input type="text" id="name" name="name" value="{{ user.name }}" required>
+  <input type="text" id="name" name="name" class="input-field" value="{{ user.name }}" required>
   <label for="age">Age:</label>
-  <input type="number" id="age" name="age" value="{{ user.age }}" required>
+  <input type="number" id="age" name="age" class="input-field" value="{{ user.age }}" required>
   <label for="email">Email:</label>
-  <input type="email" id="email" name="email" value="{{ user.email }}" required>
-  <button type="submit">Update</button>
+  <input type="email" id="email" name="email" class="input-field" value="{{ user.email }}" required>
+  <button type="submit" class="btn btn-primary">Update</button>
 </form>
 
 {% endblock %}
