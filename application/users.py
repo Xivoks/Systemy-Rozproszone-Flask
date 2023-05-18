@@ -1,13 +1,17 @@
 from application import app, db
-from flask import jsonify, request, render_template, redirect, url_for, flash
+from flask import jsonify, request, render_template, redirect, url_for, flash, Flask
 from application.models import Users, UserSchema, user_schema
-from webargs.flaskparser import use_args
-from application.utils import validate_json_content_type
+
 
 
 @app.route('/')
 def home():
     return render_template('index.html')
+
+
+@app.route('/multi')
+def multi():
+    return render_template('multi.html')
 
 
 @app.route('/api/v1/users', methods=['GET'])
